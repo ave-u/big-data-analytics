@@ -2,6 +2,7 @@
 
 ### Useful Link
 [Data Footnotes](http://www.nyc.gov/html/nypd/downloads/pdf/analysis_and_planning/nypd_incident_level_data_footnotes.pdf)
+[NYPD Crime Data](https://data.cityofnewyork.us/Public-Safety/NYPD-Complaint-Data-Historic/qgea-i56i)
 
 ### Responsibility
 
