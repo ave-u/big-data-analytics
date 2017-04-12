@@ -13,27 +13,35 @@
 Columns:
 
 1. CMPLNT_NUM
+	* Data Type: Number
 	* Randomly generated persistent ID for each complaint
 
 2. CMPLNT\_FR_DT
+	* Data Type: Date & Time
 	* Exact date of occurrence for the reported event (or starting date of occurrence, if CMPLNT_TO_DT exists)
 
 3. CMPLNT\_FR_TM
+	* Data Type: Plain Text
 	* Exact time of occurrence for the reported event (or starting time of occurrence, if CMPLNT_TO_TM exists)
 
 4. CMPLNT\_TO_DT
+	* Data Type: Date & Time
 	* Ending date of occurrence for the reported event, if exact time of occurrence is unknown
 
 5. CMPLNT\_TO_TM
+	* Data Type: Plain Text
 	* Ending time of occurrence for the reported event, if exact time of occurrence is unknown
 
 6. RPT_DT
+	* Data Type: Date & Time
 	* Date event was reported to police
 
 7. BORO_NM
+	* Data Type: Plain Text
 	* The name of the borough in which the incident occurred
 
 8. ADDR\_PCT_CD
+	* Data Type: Number
 	* The precinct in which the incident occurred
 
 #### Chuan Long
