@@ -46,6 +46,7 @@ def summary(attr, attr_name, summary_file):
 	valid_data_num = valid_data.count()
 	line2 = "Number of VALID Rows:\t" + str(valid_data_num) + '\n'
 	lines += [line2]
+
 	valid_data = valid_data.map(lambda x: (x[0], 1))\
 						   .reduceByKey(lambda x, y: x + y)\
 						   .sortBy(lambda x: x[1], ascending = False).take(10)
@@ -81,7 +82,7 @@ if __name__ == '__main__':
 		summary_file = open('summary.txt', 'w')
 
 	# Load and read the dataset
-	file_path = "NYPD_Complaint_Data_Historic.csv"
+	file_path = r"/user/xs741/NYPD_Complaint_Data_Historic.csv"
 	# file_path = "sample.csv"
 	df = sc.textFile(file_path)
 	df = df.mapPartitions(lambda x : reader(x))
@@ -90,8 +91,8 @@ if __name__ == '__main__':
 	header = df.first()
 	df = df.filter(lambda x : x != header)
 
-	# Test the script with small dataset
-	# df = sc.parallelize(df.filter(lambda x: x!= header).take(1000))
+	# Test the dataset with small dataset
+	#df = sc.parallelize(df.filter(lambda x: x!= header).take(1000))
 
 	# Column: LOC_OF_OCCUR_DESC
 	loc_of_occur_desc = format(df, 15, 'LOC_OF_OCCUR_DESC', 'TEXT', isValidText)
@@ -114,7 +115,7 @@ if __name__ == '__main__':
 	summary(x_coord_cd, 'X_COORD_CD', summary_file)
 
 	# Column: Y_COORD_CD
-	y_coord_cd = format(df, 20, 'Y_COORF_CD', 'FLOAT', isValidCoords)
+	y_coord_cd = format(df, 20, 'Y_COORD_CD', 'FLOAT', isValidCoords)
 	summary(y_coord_cd, 'Y_COORD_CD', summary_file)
 
 	# Column: Latitude
