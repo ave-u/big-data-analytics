@@ -8,9 +8,27 @@ export SPARK_YARN_USER_ENV=PYTHONHASHSEED=0
 
 start ```pyspark2```
 
-> Caveat: all column was analysed seperately during count null value and invalid.
+### GETTING START
+> Caveat: Do this in dumbo and start.sh might need chmod for excute
+
+
+Simply as:
+
+```
+./start.sh &lt;argument group>
+```
+arugment group can be 1,2,3,4,5,6,14,15
+
+For example, run col1.py col2.py col14.py do ```./start.sh 1 2 14```
+
+Then it everything goes well, there would generate folders:
+
+* **log/** all column script output logs
+* **out/** all column script output
+* **plotData/** all data generated for mathplotlib
 
 ### COLUMN DESCRIPTION
+> Caveat: all column was analysed seperately during count null value and invalid.
 
 #### Column 1
 Description: Randomly generated persistent ID for each records.
