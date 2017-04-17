@@ -1,12 +1,14 @@
 # big-data-analytics
 
-### Useful Link
+### Useful Links
+
+[Project Report](https://docs.google.com/document/d/14SnZ_6uk6oxmgjR6I7VQr0qOu1YXDGigYqDEVj2ZFw0/edit)
 
 [Data Footnotes](http://www.nyc.gov/html/nypd/downloads/pdf/analysis_and_planning/nypd_incident_level_data_footnotes.pdf)
 
 [NYPD Crime Data](https://data.cityofnewyork.us/Public-Safety/NYPD-Complaint-Data-Historic/qgea-i56i)
 
-### Responsibility
+### Responsibilities
 
 #### Xiaohang Su
 -------------
@@ -54,7 +56,7 @@ Columns:
 
 2. PREM_TYP_DESC
 	* Data Type:Plain Text
-    * Specific description of premises; grocery store, residence, street, etc. 
+	* Specific description of premises; grocery store, residence, street, etc. 
 
 3. PARKS_NM
 	* Data Type:Plain Text
@@ -62,11 +64,11 @@ Columns:
 
 4. HADEVELOPT
 	* Data Type:Plain Text
-    * Name of NYCHA housing development of occurrence, if applicable
+	* Name of NYCHA housing development of occurrence, if applicable
 
 5. X_COORD_CD
 	* Data Type:Number
-    * X-coordinate for New York State Plane Coordinate System, Long Island Zone, NAD 83, units feet (FIPS 3104)
+	* X-coordinate for New York State Plane Coordinate System, Long Island Zone, NAD 83, units feet (FIPS 3104)
 
 6. Y_COORD_CD
 	* Data Type:Number
@@ -79,3 +81,29 @@ Columns:
 8. Longitude
 	* Data Type:Number
 	* Longitude coordinate for Global Coordinate System, WGS 1984, decimal degrees (EPSG 4326)
+
+#### Zebin Xu
+---------------
+Columns:
+
+1. KY_CD
+    * Data Type: Number
+    * Three digit offense classification code
+2. OFNS_DESC
+    * Data Type: Plain Text
+    * Description of offense corresponding with key code
+3. PD_CD
+    * Data Type: Number
+    * Three digit internal classification code (more granular than Key Code)
+4. PD_DESC
+    * Data Type: Plain Text
+    * Description of internal classification corresponding with PD code (more granular than Offense Description)
+5. CRM_ATPT_CPTD_CD
+    * Data Type: Plain Text
+    * Indicator of whether crime was successfully completed or attempted, but failed or was interrupted prematurely
+6. LAW_CAT_CD
+    * Data Type: Plain Text
+    * Level of offense: felony, misdemeanor, violation
+7. JURIS_DESC
+    * Data Type: Plain Text
+    * Jurisdiction responsible for incident. Either internal, like Police, Transit, and Housing; or external, like Correction, Port Authority, etc.

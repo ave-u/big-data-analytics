@@ -1,0 +1,56 @@
+Attribute:	LOC_OF_OCCUR_DESC
+Number of VALID Rows:	3973890
+Examples of VALID Rows:	[('INSIDE', 2527543), ('FRONT OF', 1189787), ('OPPOSITE OF', 140606), ('REAR OF', 113189), ('OUTSIDE', 2765)]
+Number of INVALID Rows:	213
+Example of INVALID Rows and its frequency:	[' ', ' ', ' ', ' ', ' ']
+Number of NULL Rows:	1127128
+
+Attribute:	PREM_TYP_DESC
+Number of VALID Rows:	5067952
+Examples of VALID Rows:	[('STREET', 1697935), ('RESIDENCE - APT. HOUSE', 1054419), ('RESIDENCE-HOUSE', 504402), ('RESIDENCE - PUBLIC HOUSING', 381745), ('OTHER', 134762), ('COMMERCIAL BUILDING', 131497), ('TRANSIT - NYC SUBWAY', 106028), ('DEPARTMENT STORE', 96971), ('CHAIN STORE', 95079), ('PUBLIC SCHOOL', 66521)]
+Number of INVALID Rows:	0
+Example of INVALID Rows and its frequency:	[]
+Number of NULL Rows:	33279
+
+Attribute:	PARKS_NM
+Number of VALID Rows:	7599
+Examples of VALID Rows:	[('CENTRAL PARK', 543), ('FLUSHING MEADOWS CORONA PARK', 301), ('RIVERSIDE PARK', 188), ("ST. MARY'S PARK BRONX", 143), ('MARCUS GARVEY PARK', 137), ('CONEY ISLAND BEACH & BOARDWALK', 136), ('CLAREMONT PARK', 134), ('MACOMBS DAM PARK', 122), ('VAN CORTLANDT PARK', 114), ('CROTONA PARK', 104)]
+Number of INVALID Rows:	0
+Example of INVALID Rows and its frequency:	[]
+Number of NULL Rows:	5093632
+
+Attribute:	HADEVELOPT
+Number of VALID Rows:	253205
+Examples of VALID Rows:	[('CASTLE HILL', 5495), ('VAN DYKE I', 4585), ('MARCY', 4298), ('LINCOLN', 3980), ('BUTLER', 3960), ('GRANT', 3886), ('DOUGLASS', 3749), ('LINDEN', 3718), ('FARRAGUT', 3673), ('PINK', 3640)]
+Number of INVALID Rows:	0
+Example of INVALID Rows and its frequency:	[]
+Number of NULL Rows:	4848026
+
+Attribute:	X_COORD_CD
+Number of VALID Rows:	4913085
+Examples of VALID Rows:	[('987220', 17290), ('981309', 5863), ('1016268', 4791), ('1001575', 4744), ('986882', 4630), ('1006189', 4448), ('988083', 4271), ('1019840', 4259), ('990421', 4152), ('1020754', 4061)]
+Number of INVALID Rows:	0
+Example of INVALID Rows and its frequency:	[]
+Number of NULL Rows:	188146
+
+Attribute:	Y_COORD_CD
+Number of VALID Rows:	4913085
+Examples of VALID Rows:	[('212676', 17353), ('197980', 5764), ('227533', 4857), ('232339', 4731), ('214802', 4652), ('212199', 4338), ('161784', 4293), ('206689', 4248), ('188642', 4150), ('176732', 4094)]
+Number of INVALID Rows:	0
+Example of INVALID Rows and its frequency:	[]
+Number of NULL Rows:	188146
+
+Attribute:	LATITUDE
+Number of VALID Rows:	4913085
+Examples of VALID Rows:	[('40.750430768', 17232), ('40.710093847', 5710), ('40.791151867', 4779), ('40.804384046', 4731), ('40.756266207', 4575), ('40.610717129', 4293), ('40.749121191', 4269), ('40.733926841', 4245), ('40.684461543', 4143), ('40.651698159', 4053)]
+Number of INVALID Rows:	0
+Example of INVALID Rows and its frequency:	[]
+Number of NULL Rows:	188146
+
+Attribute:	LONGITUDE
+Number of VALID Rows:	4913085
+Examples of VALID Rows:	[('-73.989282176', 17232), ('-74.01060963', 5710), ('-73.884371919', 4779), ('-73.937421669', 4731), ('-73.990501248', 4575), ('-73.920985283', 4293), ('-73.986167723', 4269), ('-73.871582398', 4245), ('-73.97775121', 4143), ('-73.868446756', 4053)]
+Number of INVALID Rows:	0
+Example of INVALID Rows and its frequency:	[]
+Number of NULL Rows:	188146
+
