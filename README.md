@@ -56,7 +56,7 @@ Columns:
 
 2. PREM_TYP_DESC
 	* Data Type:Plain Text
-    * Specific description of premises; grocery store, residence, street, etc. 
+	* Specific description of premises; grocery store, residence, street, etc. 
 
 3. PARKS_NM
 	* Data Type:Plain Text
@@ -64,11 +64,11 @@ Columns:
 
 4. HADEVELOPT
 	* Data Type:Plain Text
-    * Name of NYCHA housing development of occurrence, if applicable
+	* Name of NYCHA housing development of occurrence, if applicable
 
 5. X_COORD_CD
 	* Data Type:Number
-    * X-coordinate for New York State Plane Coordinate System, Long Island Zone, NAD 83, units feet (FIPS 3104)
+	* X-coordinate for New York State Plane Coordinate System, Long Island Zone, NAD 83, units feet (FIPS 3104)
 
 6. Y_COORD_CD
 	* Data Type:Number
