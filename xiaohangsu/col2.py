@@ -1,5 +1,6 @@
 from pyspark import SparkContext
 import datetime
+import re
 from csv import reader
 
 if __name__ == "__main__":
@@ -55,12 +56,28 @@ if __name__ == "__main__":
     day.collect()
 
     col2 \
-        .map(lambda x: x + ' DATE VALID' if x != None else 'NULL') \
+        .map(lambda x: x + ' DATE OCCUR_DATE VALID' if x != None else 'NULL') \
         .saveAsTextFile('col2.out')
 
     # year image data
     year \
         .filter(lambda data: data[0] >= 2006 and data[0] <= 2015) \
+        .map(lambda data: str(data[0]) + ',' + str(data[1])) \
         .saveAsTextFile('col2_year.out')
 
+    month \
+        .map(lambda data: str(data[0]) + ',' + str(data[1])) \
+        .saveAsTextFile('col2_month.out')
+        
+    day \
+        .map(lambda data: str(data[0]) + ',' + str(data[1])) \
+        .saveAsTextFile('col2_day.out')
+
+    dateGroup = validCol2 \
+        .filter(lambda x: x.year >= 2006 and x.year <= 2015) \
+        .map(lambda x: (x, 1)) \
+        .reduceByKey(lambda x, y: x + y) \
+        .map(lambda x: x[0].date().__str__() + ',' + str(x[1])) \
+        .sortBy(lambda x: x) \
+        .saveAsTextFile('col2_date_group.out')
     sc.stop()

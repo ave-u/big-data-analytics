@@ -5,7 +5,7 @@ from csv import reader
 if __name__ == "__main__":
     sc = SparkContext()
 
-    filepath    = r'./NYPD_Complaint_Data_Historic.csv'
+    filepath    = r'/user/xs741/NYPD_Complaint_Data_Historic.csv'
     df = sc.textFile(filepath).map(lambda l: reader([l]).__next__())
 
     header = df.first() # csv header
@@ -33,6 +33,6 @@ if __name__ == "__main__":
     id.collect()
 
     col15 \
-        .map(lambda x: str(x) + ' INT VALID' if x != None else 'NULL') \
+        .map(lambda x: str(x) + ' INT PRECINCT VALID' if x != None else 'NULL') \
         .saveAsTextFile('col15.out')
     sc.stop()

@@ -71,7 +71,17 @@ if __name__ == "__main__":
     second.collect()
 
     col3 \
-        .map(lambda x: x + ' TIME VALID' if x != None else 'NULL') \
+        .map(lambda x: x + ' TIME OCCUR_TIME VALID' if x != None else 'NULL') \
         .saveAsTextFile('col3.out')
 
+    hour \
+        .map(lambda x: str(x[0]) + ',' + str(x[1])) \
+        .saveAsTextFile('col3_hour.out')
+
+    timeGroup = validCol3 \
+        .map(lambda x: (x, 1)) \
+        .reduceByKey(lambda x, y: x+y) \
+        .map(lambda x: x[0].__str__() + ',' + str(x[1])) \
+        .sortBy(lambda x: x) \
+        .saveAsTextFile('col3_time_group.out')
     sc.stop()
