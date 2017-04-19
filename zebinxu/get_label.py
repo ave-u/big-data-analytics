@@ -24,7 +24,8 @@ rdd = data.filter(lambda row: row != header) \
     .mapPartitions(lambda row: csv.reader(row)) \
     .map(lambda row: (row[6], row[7], row[8], row[9], row[10], row[11], row[12])).cache()
 
-# Save for each row a tuple (basic type, semantic type, label) for every column. This tells if the value is VALID/INVALID/NULL
+# Save for each row a tuple (value, basic type, semantic type, label) for every column. 
+# This tells if the value is VALID/INVALID/NULL.
 label_file_pattern = 'result/label/col{}.out' 
 
 ## Assign each value a tuple (basic_type, semantic_type, label), where label can be VALID/INVALID/NULL

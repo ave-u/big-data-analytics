@@ -27,7 +27,8 @@ rdd = data.filter(lambda row: row != header) \
 
 count_file_pattern = 'result/label_count/col{}.out' # Save for each row a tuple (basic type, semantic type, label, count) for each column 
 
-## Aggregate and count the label for each column. Each row is assigned the count (last column) for the label (second last column): (basic_type, semantic_type, label, count)
+## Aggregate and count the label for each column. 
+#Each row is assigned the count (last column) for the label (second last column): (basic_type, semantic_type, label, count)
 
 # Column 7
 save_label_count(rdd, 7, count_file_pattern, 'INT', 'THREE_DIGIT_CODE', check_three_digit)
