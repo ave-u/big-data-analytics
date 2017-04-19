@@ -27,9 +27,19 @@ function get() {
     done
 }
 
+function add_header() {
+    echo "adding header..."
+    for x in 7 8 9 10 11 12 13; do
+        sed -i '' '1s/^/values,count\'$'\n/' result/values_count/col${x}.csv
+        sed -i '' '1s/^/values,base type, semantic type,label\'$'\n/' result/label/col${x}.csv
+        sed -i '' '1s/^/base type,semantic type,label,count\'$'\n/' result/label_count/col${x}.csv
+    done
+}
+
 clean
 spark2-submit get_values_count.py
 spark2-submit get_label.py
 spark2-submit get_label_count.py
 get
+add_header
 
