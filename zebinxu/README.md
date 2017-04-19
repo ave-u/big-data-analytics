@@ -14,19 +14,19 @@
 ### Aggregated Values Count
 Aggregate each column and count their frequency. The script used to produce the result: `get_values_count.py`
 
-[Column 7: KY\_CD](https://raw.githubusercontent.com/ave-u/big-data-analytics/master/zebinxu/result/values_count/col7.csv)
+[Column 7: KY\_CD](https://github.com/ave-u/big-data-analytics/blob/master/zebinxu/result/values_count/values_count/col7.csv)
 
-[Column 8: OFNS\_DESC](https://raw.githubusercontent.com/ave-u/big-data-analytics/master/zebinxu/result/values_count/col8.csv)
+[Column 8: OFNS\_DESC](https://github.com/ave-u/big-data-analytics/blob/master/zebinxu/result/values_count/col8.csv)
 
-[Column 9: PD\_CD](https://raw.githubusercontent.com/ave-u/big-data-analytics/master/zebinxu/result/values_count/col9.csv)
+[Column 9: PD\_CD](https://github.com/ave-u/big-data-analytics/blob/master/zebinxu/result/values_count/col9.csv)
 
-[Column 10: PD\_DESC](https://raw.githubusercontent.com/ave-u/big-data-analytics/master/zebinxu/result/values_count/col10.csv)
+[Column 10: PD\_DESC](https://github.com/ave-u/big-data-analytics/blob/master/zebinxu/result/values_count/col10.csv)
 
-[Column 11: CRM\_ATPT\_CPTD\_CD](https://raw.githubusercontent.com/ave-u/big-data-analytics/master/zebinxu/result/values_count/col11.csv)
+[Column 11: CRM\_ATPT\_CPTD\_CD](https://github.com/ave-u/big-data-analytics/blob/master/zebinxu/result/values_count/col11.csv)
 
-[Column 12: LAW\_CAT\_CD](https://raw.githubusercontent.com/ave-u/big-data-analytics/master/zebinxu/result/values_count/col12.csv)
+[Column 12: LAW\_CAT\_CD](https://github.com/ave-u/big-data-analytics/blob/master/zebinxu/result/values_count/col12.csv)
 
-[Column 13: JURIS\_DESC](https://raw.githubusercontent.com/ave-u/big-data-analytics/master/zebinxu/result/values_count/col13.csv)
+[Column 13: JURIS\_DESC](https://github.com/ave-u/big-data-analytics/blob/master/zebinxu/result/values_count/col13.csv)
 
 
 ### Base type, Semantic data type, and Label
