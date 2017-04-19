@@ -71,7 +71,7 @@ if __name__ == "__main__":
     second.collect()
 
     col5 \
-        .map(lambda x: x + ' TIME VALID' if x != None else 'NULL') \
+        .map(lambda x: x + ' TIME END_TIME VALID' if x != None else 'NULL') \
         .saveAsTextFile('col5.out')
 
     sc.stop()

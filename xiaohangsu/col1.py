@@ -33,6 +33,7 @@ if __name__ == "__main__":
         ' to ', persistentId.max())
 
     persistentId \
-        .map(lambda x: str(x) + ' INT VALID' if x != None else 'NULL') \
+        .map(lambda x: str(x) + ' INT PERSISTENTID VALID' if x != None else 'NULL') \
         .saveAsTextFile('col1.out')
+
     sc.stop()

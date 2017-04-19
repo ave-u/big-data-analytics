@@ -52,7 +52,7 @@ if __name__ == "__main__":
     day.collect()
 
     col4 \
-        .map(lambda x: x + ' DATE VALID' if x != None else 'NULL') \
+        .map(lambda x: x + ' DATE END_DATE VALID' if x != None else 'NULL') \
         .saveAsTextFile('col4.out')
 
     sc.stop()
