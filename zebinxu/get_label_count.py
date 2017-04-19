@@ -7,14 +7,14 @@ def save_label_count(rdd, col_index, count_file_pattern, basic_type, semantic_ty
     """ Group by label column and count and save """ 
     rdd.map(lambda row: (label_func(row[col_index - 7].strip()), 1)) \
         .reduceByKey(lambda x, y: x + y) \
-        .map(lambda row: '%s\t%s\t%s\t%d' % (basic_type, semantic_type, row[0], row[1])) \
+        .map(lambda row: '%s,%s,%s,%d' % (basic_type, semantic_type, row[0], row[1])) \
         .coalesce(1) \
         .saveAsTextFile(count_file_pattern.format(col_index))
 
 
 sc = SparkContext()
-filepath = './NYPD_Complaint_Data_Historic.csv'
-data = sc.textFile(filepath)
+sc.addPyFile('label.py')
+data = sc.textFile('./NYPD_Complaint_Data_Historic.csv')
 
 # Header
 header = data.first()
@@ -25,7 +25,7 @@ rdd = data.filter(lambda row: row != header) \
     .map(lambda row: (row[6], row[7], row[8], row[9], row[10], row[11], row[12])).cache()
 
 
-count_file_pattern = 'col{}_count.out' # Save for each row a tuple (basic type, semantic type, label, count) for each column 
+count_file_pattern = 'result/label_count/col{}.out' # Save for each row a tuple (basic type, semantic type, label, count) for each column 
 
 ## Aggregate and count the label for each column. Each row is assigned the count (last column) for the label (second last column): (basic_type, semantic_type, label, count)
 

@@ -1,4 +1,4 @@
-##Data Summary
+## Data Summary
 
 | Column | Base Type | Semantic Type | Label count | Summary
 |:---:|:---:|:---:|:---:|:---:|
@@ -10,9 +10,9 @@
 | LAW\_CAT\_CD        | TEXT | Offense level    | VALID: 5101231 INVALID: 0 NULL: 0     | Three possible values: "VIOLATION", "FELONY", and "MISDEMEANOR"
 | JURIS\_DESC         | TEXT | Jurisdiction     | VALID: 5101231 INVALID: 0 NULL: 0     | 25 possible values
 
-
-## Aggregated Values and Count
-Aggregate each column and count their frequency. The script used to produce the result: [get\_values\_count.py](https://github.com/ave-u/big-data-analytics/blob/master/zebinxu/get_values_count.py)
+## Results
+### Aggregated Values Count
+Aggregate each column and count their frequency. The script used to produce the result: `get_values_count.py`
 
 [Column 7: KY\_CD](https://raw.githubusercontent.com/ave-u/big-data-analytics/master/zebinxu/result/values_count/col7.csv)
 
@@ -29,10 +29,12 @@ Aggregate each column and count their frequency. The script used to produce the 
 [Column 13: JURIS\_DESC](https://raw.githubusercontent.com/ave-u/big-data-analytics/master/zebinxu/result/values_count/col13.csv)
 
 
-## Base type, Semantic data type, Label
-Assign each value a base type, a semantic data type, and a label (VALID/INVALID/NULL). The script used to produce the result: [get\_label.py](https://github.com/ave-u/big-data-analytics/blob/master/zebinxu/get_label.py)
+### Base type, Semantic data type, and Label
+Assign each value a base type, a semantic data type, and a label (VALID/INVALID/NULL). The script used to produce the result: `get_label.py`
 
-## Label Count
-Count label for each column. The script used to produce the result: [get\_label\_count.py](https://github.com/ave-u/big-data-analytics/blob/master/zebinxu/get_label_count.py)
+### Label Count
+Count label for each column. The script used to produce the result: `get_label_count.py`.
+The result is under [result/label_count](https://github.com/ave-u/big-data-analytics/tree/master/zebinxu/result/label_count)
 
-
+## Reproducibility
+To reproduce the above three types of result, execute the `run.sh` script on dumbo.

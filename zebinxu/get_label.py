@@ -6,14 +6,15 @@ from label import *
 def save_label(rdd, col_index, label_file_pattern, basic_type, semantic_type, label_func):
     """ Map every row in a column to a tuple (basic_type, semantic_type, label) and save to file """
     rdd.map(lambda row: row[col_index - 7].strip()) \
-        .map(lambda row: '%s\t%s\t%s\t%s' % (row, basic_type, semantic_type, label_func(row))) \
+        .map(lambda row: '%s,%s,%s,%s' % (row, basic_type, semantic_type, label_func(row))) \
         .coalesce(1) \
         .saveAsTextFile(label_file_pattern.format(col_index))
 
 
+
 sc = SparkContext()
-filepath = './NYPD_Complaint_Data_Historic.csv'
-data = sc.textFile(filepath)
+sc.addPyFile('label.py')
+data = sc.textFile('./NYPD_Complaint_Data_Historic.csv')
 
 # Header
 header = data.first()
@@ -23,8 +24,8 @@ rdd = data.filter(lambda row: row != header) \
     .mapPartitions(lambda row: csv.reader(row)) \
     .map(lambda row: (row[6], row[7], row[8], row[9], row[10], row[11], row[12])).cache()
 
-
-label_file_pattern = 'col{}_label.out' # Save for each row a tuple (basic type, semantic type, label) for every column. This tells if the value is VALID/INVALID/NULL
+# Save for each row a tuple (basic type, semantic type, label) for every column. This tells if the value is VALID/INVALID/NULL
+label_file_pattern = 'result/label/col{}.out' 
 
 ## Assign each value a tuple (basic_type, semantic_type, label), where label can be VALID/INVALID/NULL
 
@@ -42,3 +43,4 @@ save_label(rdd, 11, label_file_pattern, 'TEXT', 'INDICATOR', check_indicator)
 save_label(rdd, 12, label_file_pattern, 'TEXT', 'OFFENSE_LEVEL', check_offense_level)
 # Column 13
 save_label(rdd, 13, label_file_pattern, 'TEXT', 'JURISDICTION', checknull)
+
