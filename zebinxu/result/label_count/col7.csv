@@ -1,1 +1,2 @@
-INT	THREE_DIGIT_CODE	VALID	5101231
+base type,semantic type,label,count
+INT,THREE_DIGIT_CODE,VALID,5101231

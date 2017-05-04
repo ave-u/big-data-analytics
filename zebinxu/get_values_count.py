@@ -3,7 +3,7 @@ from pyspark import SparkContext
 import csv
 from label import *
 
-def save_values_count(rdd, column_index, offset):
+def save_values_count(rdd, column_index, offset, file_pattern):
     """
         Aggregate the column based on column_index and count
         Each row is mapped to a tuple (value, count),
@@ -14,14 +14,14 @@ def save_values_count(rdd, column_index, offset):
     count = rdd.map(lambda row: (row[column_index - offset].strip(), 1)) \
     .reduceByKey(lambda x, y: x + y) \
     .sortBy(lambda row: row[1]) \
-    .map(lambda row: '%s\t%d' % (row[0], row[1])) \
+    .map(lambda row: '%s,%d' % (row[0], row[1])) \
     .coalesce(1) \
-    .saveAsTextFile('col{}_values_count.out'.format(column_index))
+    .saveAsTextFile(file_pattern.format(column_index))
 
 
 sc = SparkContext()
-filepath = './NYPD_Complaint_Data_Historic.csv'
-data = sc.textFile(filepath)
+sc.addPyFile('label.py')
+data = sc.textFile('./NYPD_Complaint_Data_Historic.csv')
 
 # Header
 header = data.first()
@@ -33,9 +33,10 @@ rdd = data.filter(lambda row: row != header) \
 
 
 start_index = 7 # Starting index of the column
+file_pattern = 'result/values_count/col{}.out'
 
 # Initial inspection by aggregating each column separately and count and save
 for i in range(start_index, 14):
-    save_values_count(rdd, i, start_index)
+    save_values_count(rdd, i, start_index, file_pattern)
 
 sc.stop()
