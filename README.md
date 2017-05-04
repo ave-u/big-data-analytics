@@ -107,3 +107,7 @@ Columns:
 7. JURIS_DESC
     * Data Type: Plain Text
     * Jurisdiction responsible for incident. Either internal, like Police, Transit, and Housing; or external, like Correction, Port Authority, etc.
+
+### Assumption
+
+*	There are connections between festivals and crimes.
