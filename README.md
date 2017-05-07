@@ -111,3 +111,4 @@ Columns:
 ### Assumption
 
 *	There are connections between festivals and crimes.
+*	There are more crimes happened in night than daylight.
