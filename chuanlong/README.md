@@ -1,6 +1,6 @@
 ### Environment
 
-> * We use pyspark to produce to experiment
+> * Pyspark
 
 
 ### How To Run
