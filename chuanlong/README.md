@@ -2,21 +2,29 @@
 
 ### To analyse the column description
 
-./run_analyseColumns.sh
+	
+`./run_analyseColumns.sh	
+`
 
 and then 
 
-./merge_analyseColumns.sh
+	
+`./merge_analyseColumns.sh	
+`
 
 To merge the formatting output of the analysed columns
 
 ### To get the data that we need to plot
 
-./run_plotColumns.sh
+	
+`./run_plotColumns.sh	
+`
 
 and then
 
-./merge_plotColumns.sh
+	
+`./merge_plotColumns.sh	
+`
 
 To merge the dataset that we need to plot for the first part
 
