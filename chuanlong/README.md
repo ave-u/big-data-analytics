@@ -1,39 +1,41 @@
-## Environment
+### Environment
+
+> * We use pyspark to produce to experiment
 
 
-## How To Run
+### How To Run
 
-### To analyse the column description
+#### To analyse the column description
 
 	
-```./run_analyseColumns.sh	
-```
+`./run_analyseColumns.sh	
+`
 
 Then
 
 	
-```./merge_analyseColumns.sh	
-```
+`./merge_analyseColumns.sh	
+`
 
 To merge the formatting output of the analysed columns
 
-### To get the data that we need to plot
+#### To get the data that we need to plot
 
 	
-```./run_plotColumns.sh	
-```
+`./run_plotColumns.sh	
+`
 
 Then
 
 	
-```./merge_plotColumns.sh	
-```
+`./merge_plotColumns.sh	
+`
 
 To merge the dataset that we need to plot for the first part
 
-## Columns Description
 
- 
+### Columns Description
+
 1. Column15 - LOC_OF_OCCUR_DESC
 	* Data Type:Plain Text
 	* Description: Specific location of occurrence in or around the premises(inside, opposite of, front of, rear of)
