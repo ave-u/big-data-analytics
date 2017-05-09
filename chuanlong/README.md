@@ -6,33 +6,35 @@ ___
 
 ### How To Run
 
-#### To analyse the column description
+> To analyse the column description
 
 	
 `./run_analyseColumns.sh	
 `
 
-Then
+> Then
 
 	
 `./merge_analyseColumns.sh	
 `
 
-To merge the formatting output of the analysed columns
+> To merge the formatting output of the analysed columns
 
-#### To get the data that we need to plot
+> To get the data that we need to plot
 
 	
 `./run_plotColumns.sh	
 `
 
-Then
+> Then
 
 	
 `./merge_plotColumns.sh	
 `
 
-To merge the dataset that we need to plot for the first part
+> To merge the dataset that we need to plot for the first part
+
+> We are done!
 
 ___
 
