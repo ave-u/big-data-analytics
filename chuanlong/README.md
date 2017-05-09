@@ -1,44 +1,48 @@
-### Environment
+## Environment Setup
 
-> * Pyspark
-
+```module load python/gnu/3.4.4
+export PYSPARK_PYTHON=/share/apps/python/3.4.4/bin/python
+export PYTHONHASHSEED=0
+export SPARK_YARN_USER_ENV=PYTHONHASHSEED=0
+alias hfs='/usr/bin/hadoop fs'
+```
 ___
 
-### How To Run
+## How To Run
 
-> To analyse the column description
-
-	
-`./run_analyseColumns.sh	
-`
-
-> Then
+### To analyse the column description
 
 	
-`./merge_analyseColumns.sh	
+`sh run_analyseColumns.sh	
 `
 
-> To merge the formatting output of the analysed columns
-
-> To get the data that we need to plot
+ Then
 
 	
-`./run_plotColumns.sh	
+`sh merge_analyseColumns.sh	
 `
 
-> Then
+ To merge the formatting output of the analysed columns
+
+### To get the data that we need to plot
 
 	
-`./merge_plotColumns.sh	
+`sh run_plotColumns.sh	
 `
 
-> To merge the dataset that we need to plot for the first part
+Then
+
+	
+`sh merge_plotColumns.sh	
+`
+
+To merge the dataset that we need to plot for the first part
 
 > We are done!
 
 ___
 
-### Columns Description
+## Columns Description
 
 1. Column15 - LOC_OF_OCCUR_DESC
 	* Data Type:Plain Text
