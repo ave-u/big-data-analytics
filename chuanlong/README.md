@@ -6,7 +6,6 @@ export PYTHONHASHSEED=0
 export SPARK_YARN_USER_ENV=PYTHONHASHSEED=0
 alias hfs='/usr/bin/hadoop fs'
 ```
-___
 
 ## How To Run
 
@@ -40,7 +39,6 @@ To merge the dataset that we need to plot for the first part
 
 > We are done!
 
-___
 
 ## Columns Description
 
